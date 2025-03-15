@@ -85,21 +85,21 @@ Caso utilize cURLs para realizar requisições, você pode verificar abaixo um e
 
 Listar campeonatos
 
-```
+```curl
 curl --location 'http://localhost:8080/campeonatos' \
 --header 'Authorization: Bearer JWT_TOKEN'
 ```
 
 Listar partidas por campeonato (com filtro por equipe e rodada)
 
-```
+```curl
 curl --location 'http://localhost:8080/campeonatos/2000/partidas?equipe=England&rodada=2' \
 --header 'Authorization: Bearer JWT_TOKEN'
 ```
 
 Cadastrar usuário
 
-```
+```curl
 curl --location 'http://localhost:8080/auth/registar' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -111,7 +111,7 @@ curl --location 'http://localhost:8080/auth/registar' \
 
 Logar usuário
 
-```
+```curl
 curl --location 'http://localhost:8080/auth/login' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -122,7 +122,7 @@ curl --location 'http://localhost:8080/auth/login' \
 
 Cadastrar torcedor
 
-```
+```curl
 curl --location 'http://localhost:8080/torcedores' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer JWT_TOKEN' \
@@ -135,7 +135,7 @@ curl --location 'http://localhost:8080/torcedores' \
 
 Broadcast
 
-```
+```curl
 curl --location 'http://localhost:8080/broadcast' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer JWT_TOKEN' \
