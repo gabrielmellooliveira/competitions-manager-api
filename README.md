@@ -63,7 +63,7 @@ Para realizar os testes nos endpoints é importante registrar um novo usuário e
 
 ### Postman
 
-Caso utilize o postman, você pode baixar a collection chamada X que está no projeto e importa-lá na aplicação do postman para rodar os endpoints.
+Caso utilize o postman, você pode baixar o arquivo chamado competitions-manager-api.postman_collection.json que está no projeto e importa-lo na aplicação do postman para rodar os endpoints.
 
 ### cURLs
 

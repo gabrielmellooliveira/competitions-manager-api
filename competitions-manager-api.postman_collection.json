@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "f53568bf-dd94-4c23-8128-6c176c439a25",
+		"name": "Campeonatos API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2009622"
+	},
+	"item": [
+		{
+			"name": "Listar campeonatos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWx1ZSI6ImdhYnJpZWwiLCJleHAiOjE3NDIyMjYwNjZ9.0kkZrnr2flLpW_m1E_wSBbNpoaZ-O6nQm3t1wfNbmaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/campeonatos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"campeonatos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar partidas por campeonato",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWx1ZSI6ImdhYnJpZWwiLCJleHAiOjE3NDIyMjYwNjZ9.0kkZrnr2flLpW_m1E_wSBbNpoaZ-O6nQm3t1wfNbmaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/campeonatos/2000/partidas?equipe=England&rodada=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"campeonatos",
+						"2000",
+						"partidas"
+					],
+					"query": [
+						{
+							"key": "equipe",
+							"value": "England"
+						},
+						{
+							"key": "rodada",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuario\": \"gabriel\",\n\t\"senha\": \"teste\",\n\t\"confirmarSenha\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/registar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"registar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logar usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"usuario\": \"gabriel\",\n\t\"senha\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar torcedor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWx1ZSI6ImdhYnJpZWwiLCJleHAiOjE3NDIyMjYwNjZ9.0kkZrnr2flLpW_m1E_wSBbNpoaZ-O6nQm3t1wfNbmaQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"gabriel.mello\",\n\t\"email\": \"gabriel2@gmail.com\",\n\t\"time\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/torcedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"torcedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Broadcast",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWx1ZSI6ImdhYnJpZWwiLCJleHAiOjE3NDE5MzM1NDJ9.aMYb6odr_BOBkBTtwHnFCXbgBjAzxX5EUl3UD1qRQd4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo\": \"gabriel\",\n\t\"time\": \"Coritiba\",\n\t\"mensagem\": \"teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/broadcast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"broadcast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
