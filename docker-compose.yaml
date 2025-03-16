@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: competitions_manager_rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: competitions_manager
+      RABBITMQ_DEFAULT_PASS: competitions_manager
+
+  postgres:
+    image: postgres:15
+    container_name: competitions_manager_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: competitions_manager
+      POSTGRES_PASSWORD: competitions_manager
+      POSTGRES_DB: competitions_manager_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  postgres_data:

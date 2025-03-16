@@ -34,20 +34,6 @@ Para rodar o projeto, utilize o comando:
 go run cmd/main.go
 ```
 
-### Inicializando o projeto com docker
-
-Para construir o container docker, utilize o comando:
-
-```
-docker build -t competitions-manager-api .
-```
-
-Após isso, para rodar o container, utilize o comando:
-
-```
-docker run -p 8080:8080 competitions-manager-api
-```
-
 ## Testes
 
 ### Testes unitários
